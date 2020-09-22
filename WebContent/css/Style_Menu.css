@@ -1,0 +1,76 @@
+
+html{font-family:'Source code pro', calibri, serif;
+    line-height:1.15;    -webkit-text-size-adjust:100%;         -ms-text-size-adjust:100%;
+    -ms-overflow-style:scrollbar;         -webkit-tap-highlight-color:transparent;         }
+
+body{
+    margin: 0px;    padding: 0px; font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff
+}
+nav {    width: 100%;    background-color: #424558;
+}
+nav > ul{     margin: 0px;     padding: 0px
+}
+nav > ul::after {    content: "";    display: block;    clear: both;
+}
+nav > ul>li {    float: left;    position: relative;
+}
+nav > ul> li> a {    padding: 20px 30px;    color: #fff;
+}
+nav > ul > li :hover a {    padding: 15px 30px 15px 30px;
+}
+nav li{    list-style-type: none
+}
+.submenu {    display: none;
+}
+/*coment*/
+
+.subsubmenu {display: none; }
+
+.menu-estandar .submenu .subsubmenu{    background-color: rgb(230,100,40)}
+
+nav li ul li:hover .subsubmenu {    display: inline-block; position: absolute;padding: 0px; z-index: 1000;
+
+background-color: rgba(228,77,38,0.15);     }
+
+.subsubmenu li:hover a{    color: #e44d26;    font-weight: bold;
+
+    }
+
+/*coment*/
+nav a{    display: inline-block;    text-decoration: none;
+}
+nav li:hover .submenu {    display: inline-block;    position: absolute;    top: 100%;    left: 0px;
+    padding: 0px;    z-index: 1000;
+}
+.submenu li{    border-bottom: 1px solid #ccc;
+}
+.submenu li a {    padding: 15px 30px;    font-size: 13px;    color: #222538;    width: 270px;
+}
+.menu-estandar:hover {    border-top: 5px solid #e44d26; background-color: rgba(228,77,38,0.15);
+}
+.menu-reactivos:hover {    border-top: 5px solid #0070bb; background-color: rgba(000,112,192,0.15);
+}
+.menu-administrar:hover {    border-top: 5px solid #f1dc4f; background-color: rgba(241,211,79,0.15);
+}
+.menu-contact:hover {    border-top: 5px solid #bbb; background-color: rgba(220,220,220,0.15);
+}
+.menu-estandar .submenu{    background-color: rgb(230,100,40)
+}
+.menu-reactivos .submenu{    background-color: rgb(000,160,240)
+}
+.menu-administrar .submenu{    background-color: rgb(250,215,100)
+}
+.submenu li:hover a{    color: #eee;    font-weight: bold;
+}
+.menu-estandar .submenu li:hover{    background-color: rgb(210,77,60)
+}
+.menu-reactivos .submenu li:hover{ background-color: rgb(000,115,200)
+}
+.menu-administrar .submenu li:hover{background-color: rgb(200,165,75)
+}
+.menu-log {float: right; text-transform: uppercase;
+}
+.menu-log :hover{border-top: 5px solid #bbb; background-color: rgba(220,220,220,0.15);
+}
+img{width: 120px;    float: right;
+}
