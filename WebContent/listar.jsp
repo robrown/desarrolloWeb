@@ -28,7 +28,7 @@
 			</tr>
 		</thead>
 		<%
-			UserDAO dao= new UserDAO();
+			UserDAO dao=new UserDAO();
 			List<User>list=dao.listar();
 			Iterator<User>iter=list.iterator();
 			User usu=null;

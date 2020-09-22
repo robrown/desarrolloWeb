@@ -11,7 +11,7 @@
 <div class="container">
 	<div class="col-lg-6">
 		<h1>Agregar Usuario</h1>
-		<form action="Controller">
+		<form action="Controller" method="get">
 			Nombre Usuario:<br>
 			<input class="form-control" type="text" name="txtUserName"><br>
 			Contraseña:<br>

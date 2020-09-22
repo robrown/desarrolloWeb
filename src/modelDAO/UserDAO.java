@@ -21,13 +21,16 @@ public class UserDAO implements CRUD{
 			con=cn.getConexion();
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
+			System.out.println(rs.next());
+			System.out.println(rs.getNString("name"));
 			while(rs.next()) {
 				User usuario = new User();
-				usuario.setId(rs.getInt("id"));
 				usuario.setName(rs.getNString("name"));
 				usuario.setLast_name_one(rs.getNString("last_name_one"));
 				usuario.setLast_name_two(rs.getNString("last_name_two"));
+				usuario.setUser_name(rs.getNString("user_name"));
 				usuario.setDni(rs.getNString("dni"));
+				System.out.println(usuario);
 				lista.add(usuario);
 			}
 			
@@ -45,7 +48,7 @@ public class UserDAO implements CRUD{
 
 	@Override
 	public boolean add(User usuario) {
-		String sql = "insert into users(name,last_one,last_two,user_name,password,dni) values('" +
+		String sql = "insert into users(name,last_one,last_two,user_name,password,dni)values('" +
 				usuario.getName() + "','" + usuario.getLast_name_one() + "','" + usuario.getLast_name_two() +
 				usuario.getUser_name() + "','" + usuario.getPassword() + "','" + usuario.getDni() + "')";
 		try {
@@ -54,7 +57,7 @@ public class UserDAO implements CRUD{
 			ps.executeUpdate();
 			
 		}catch (Exception e) {
-			
+			System.out.println("Error al insertar el usuario." + e);
 		}
 		return false;
 	}

@@ -10,13 +10,14 @@ public class User {
 	String last_name_two;
 	String dni;
 	
-	public User(String user_name, String name, String last_name_one, String last_name_two, String dni) {
+	public User(String user_name, String name, String last_name_one, String last_name_two, String dni, String pass) {
 		super();
 		this.user_name = user_name;
 		this.name = name;
 		this.last_name_one = last_name_one;
 		this.last_name_two = last_name_two;
 		this.dni = dni;
+		this.password = pass;
 	}
 	
 	public User() {

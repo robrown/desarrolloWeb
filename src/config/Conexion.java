@@ -3,8 +3,9 @@ package config;
 import java.sql.*;
 
 public class Conexion {
-	Connection connection = null;
-    public void connectDatabase() {
+	Connection connection;
+    public  Conexion() {
+    	
         try {
             // We register the PostgreSQL driver
             // Registramos el driver de PostgresSQL
@@ -48,7 +49,7 @@ public class Conexion {
             } catch (ClassNotFoundException ex) {
                 System.out.println("Error al registrar el driver de PostgreSQL: " + ex);
             }
-            // Connection connection = null;
+            Connection connection = null;
             url = "jdbc:postgresql://" + host + ":" + port + "/" + database;
             // Database connect
             // Conectamos con la base de datos
