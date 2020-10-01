@@ -1,0 +1,163 @@
+body {
+    background-color: #BBBBBB;
+    text-align: center;
+}
+
+body#popup {
+    background-color: #FFFFFF;
+    text-align: center;
+    color: #0000DD;
+}
+
+div#encabezado {
+    background-color: #0000AA;
+    color: #FFFFFF;
+    width: 1000px;
+    height: 60px;
+    font: 30px/34px Arial;
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+div#subtitulo {
+    background-color: #DD0000;
+    color: #FFFF00;
+    width: 1000px;
+    height: 40px;
+    font: 14px/18px Arial;
+    font-weight: bold;
+    text-align: left;
+    position: absolute;
+    top: 60px;
+    left:0;
+    padding-left:15px;
+    padding-top: 5px;
+    z-index: 100;
+}
+
+div#logo {
+    height: 60px;
+    text-align: left;
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+div#titulos {
+    height: 60px;
+    width: 700px;
+    text-align: left;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    top:0;
+    left:0;
+}
+
+img#logo {
+    height: 60px;
+}
+
+div#contenido {
+    height: 600px;
+    width: 1000px;
+    text-align: left;
+    position: absolute;
+    top:100px;
+    left:0px;
+    background-color: #FFFFFF;
+    color: #0000BB;
+    font: 12px/14px Arial;
+    padding:15px;
+}
+
+div#login {
+    border: 1px;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 2px;
+    height: 50px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+div#derecha {
+    border: 1px;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 2px;
+    color: #FFFFFF;
+    width: 780px;
+    height: 580px;
+    text-align: left;
+    position: absolute;
+    top:10px;
+    left:200px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+table#listado {
+    background-color: #AAAAAA;
+    color: #0000BB;
+    font: 12px/14px Arial;
+    border-style: solid;
+    border-width:3px;
+    border-color:black;
+}
+
+table#listado th {
+    background-color: #333333;
+    color: #FFFFFF;
+    font: 15px/25px Arial;
+    font-weight:bold;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+table#listado td {
+    background-color: #FFFFFF;
+    color: #0000FF;
+    font: 13px/16px Arial;
+    padding: 2px;
+ }
+
+table#editar {
+    background-color: #BBBBBB;
+    color: #0000BB;
+    font: 12px/18px Arial;
+    font-weight: bold;
+    border-style: solid;
+    border-width:3px;
+    border-color:#000000;
+}
+
+table#editar th {
+    background-color: #444444;
+    color: #FFFFFF;
+    font: 16px/25px Arial;
+    font-weight:bolder;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+table#editar td {
+    background-color: #FFFFFF;
+    color: #0000BB;
+    font: 12px/18px Arial;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #666666;
+    padding:7px;
+}
+

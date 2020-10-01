@@ -3,12 +3,12 @@ package modelDAO;
 import java.sql.*;
 import java.util.*;
 
-import config.Conexion;
+import config.cBaseDatos;
 import interfaces.CRUD;
 import model.User;
 
 public class UserDAO implements CRUD{
-	Conexion cn = new Conexion();
+	cBaseDatos cn = new cBaseDatos();
 	Connection con;
 	PreparedStatement ps;
 	ResultSet rs;
@@ -16,21 +16,21 @@ public class UserDAO implements CRUD{
 	@Override
 	public List<User> listar() {
 		ArrayList<User>lista = new ArrayList<>();
-		String sql="select * from users";
+		String sql="select * from auth_user";
 		try {
-			con=cn.getConexion();
+			con=cn.conectar();
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
-			System.out.println(rs.next());
-			System.out.println(rs.getNString("name"));
+			//System.out.println(rs.next());
+			System.out.println(rs.getString("username"));
 			while(rs.next()) {
 				User usuario = new User();
-				usuario.setName(rs.getNString("name"));
-				usuario.setLast_name_one(rs.getNString("last_name_one"));
-				usuario.setLast_name_two(rs.getNString("last_name_two"));
-				usuario.setUser_name(rs.getNString("user_name"));
-				usuario.setDni(rs.getNString("dni"));
-				System.out.println(usuario);
+				usuario.setName(rs.getString("username"));
+				usuario.setLast_name_one(rs.getString("email"));
+				usuario.setLast_name_two(rs.getString("date_joined"));
+				usuario.setUser_name(rs.getString("user_name"));
+				usuario.setDni(rs.getString("dni"));
+				System.out.println("No entra");
 				lista.add(usuario);
 			}
 			
@@ -48,7 +48,7 @@ public class UserDAO implements CRUD{
 
 	@Override
 	public boolean add(User usuario) {
-		String sql = "insert into users(name,last_one,last_two,user_name,password,dni)values('" +
+		String sql = "insert into auth_user(name,last_one,last_two,user_name,password,dni)values('" +
 				usuario.getName() + "','" + usuario.getLast_name_one() + "','" + usuario.getLast_name_two() +
 				usuario.getUser_name() + "','" + usuario.getPassword() + "','" + usuario.getDni() + "')";
 		try {
